@@ -5,17 +5,17 @@ import styles from './Navbar.module.css'
 const Navbar = () => {
     return (
         <nav className={styles.navbar}>
-            <NavLink to="/" className={styles.brand}>
+            <NavLink to="/" style={({ isActive }) => ({ color: isActive ? 'white' : 'white' })} className='buttonNav'>
                 Pizza Pra Galera
             </NavLink>
             <ul className={styles.links_list}>
                 <li>
-                    <NavLink to="/register" className={({ isActive }) => (isActive ? styles.active : '')}>
+                    <NavLink to="/sabores" style={({ isActive }) => ({ color: isActive ? 'white' : 'white' })} className='buttonNav'>
                         Cardápio
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/login" className={({ isActive }) => (isActive ? styles.active : '')}>
+                    <NavLink to="/login" style={({ isActive }) => ({ color: isActive ? 'white' : 'white' })} className='buttonNav'>
                         Entrar
                     </NavLink>
                 </li>

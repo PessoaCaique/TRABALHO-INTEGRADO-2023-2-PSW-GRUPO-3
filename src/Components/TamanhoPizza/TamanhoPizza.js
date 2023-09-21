@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './tamanhos.css'
+import { NavLink } from 'react-router-dom/dist';
 
 function TamanhoPizza() {
     const [tamanhoSelecionado, setTamanhoSelecionado] = useState(null);
@@ -30,7 +30,7 @@ function TamanhoPizza() {
                 </li>
             </ul>
 
-            <Link className="button-container" to="/sabores">Ir para Sabores de Pizza</Link>
+            <NavLink className="button-container" to="/sabores">Ir para Sabores de Pizza</NavLink>
 
             {/* Exibir o tamanho selecionado) */}
             {tamanhoSelecionado && (
